@@ -45,6 +45,7 @@ extra_css:
   - stylesheets/play.css
   - stylesheets/puzzles.css
   - katex/katex.min.css
+  - stylesheets/ask.css
 
 extra:
   homepage: https://www.akadian.ca/
@@ -60,6 +61,7 @@ extra_javascript:
   - javascripts/reader.js
   - javascripts/play.js
   - javascripts/puzzles.js
+  - javascripts/ask.js
 
 markdown_extensions:
   - toc:
