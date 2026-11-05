@@ -1,0 +1,129 @@
+/* puzzles.akadian.ca: the "AI-created" tag, the start band, and the puzzles you play on the page (javascripts/puzzles.js). */
+
+/* the small tag on every page and on the banner */
+.ai-created {
+  display: inline-block;
+  margin: 0 0 .4rem;
+  padding: .05rem .5rem;
+  font-size: .62rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 99px;
+}
+.md-typeset .ai-created { margin-bottom: 0; }
+.ai-created--hero {
+  position: absolute; right: .6rem; bottom: .5rem;
+  color: #f4e6d4; border-color: rgba(244, 230, 212, .45); background: rgba(10, 8, 6, .4);
+}
+
+/* the closed boxes (answers, going deeper, sources) */
+.md-typeset details { border: 1px solid var(--md-default-fg-color--lightest) !important; border-radius: 8px; box-shadow: none; }
+.md-typeset details > summary { background: transparent !important; font-weight: 600; }
+.md-typeset details > summary::before { background-color: var(--md-typeset-a-color) !important; }
+
+/* lists of puzzles on the section pages */
+.md-typeset .pz-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); gap: .7rem; margin: 1rem 0; }
+.md-typeset .pz-cards > a {
+  display: block; padding: .7rem .8rem; border-radius: 10px;
+  border: 1px solid var(--md-default-fg-color--lightest); background: var(--mars-bg-soft);
+  color: var(--md-default-fg-color);
+}
+.md-typeset .pz-cards > a:hover { border-color: var(--mars-rust); }
+.md-typeset .pz-cards strong { display: block; color: var(--mars-rust); }
+.md-typeset .pz-cards span { font-size: .7rem; color: var(--md-default-fg-color--light); }
+
+/* ---------- every playable puzzle ---------- */
+.md-typeset .pz {
+  margin: 1.2rem 0; padding: .8rem; border-radius: 12px;
+  border: 1px solid var(--md-default-fg-color--lightest); background: var(--mars-bg-soft);
+}
+.pz-bar { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: .7rem; }
+.pz-btn, .pz-select {
+  font: inherit; font-size: .72rem; padding: .3rem .7rem; border-radius: 99px; cursor: pointer;
+  color: var(--md-default-fg-color); background: transparent; border: 1px solid var(--md-default-fg-color--lighter);
+}
+.pz-btn:hover, .pz-btn.is-on { border-color: var(--mars-rust); color: var(--mars-rust); }
+.pz-btn.is-on { background: var(--md-accent-fg-color--transparent); }
+.pz-select option { color: #222; }
+.md-typeset .pz-status { margin: .6rem 0 0; font-size: .75rem; color: var(--md-default-fg-color--light); min-height: 1.2em; }
+.pz button { -webkit-tap-highlight-color: transparent; }
+
+/* square grids: 15 puzzle, boards, lights */
+.pz-grid { display: grid; grid-template-columns: repeat(var(--n), 1fr); gap: 3px; max-width: min(100%, 24rem); margin: 0 auto; }
+.pz-grid > button { aspect-ratio: 1; border: 0; padding: 0; font: inherit; cursor: pointer; }
+
+.pz-fifteen > .pz-cell { border-radius: 8px; font-size: 1.1rem; font-weight: 600; color: #2b1a12; background: #e9b98d; }
+.pz-fifteen > .pz-cell.is-blank { background: transparent; cursor: default; }
+
+.pz-board { gap: 0; border: 2px solid var(--md-default-fg-color--lighter); max-width: min(100%, 26rem); }
+.pz-board > .pz-sq { background: #ead2b6; color: #2b1a12; font-size: clamp(.7rem, 3.4vw, 1.3rem); position: relative; }
+.pz-board > .pz-sq.is-dark { background: #b9805a; }
+.pz-board > .pz-sq.is-hit { box-shadow: inset 0 0 0 100px rgba(80, 20, 10, .28); }
+.pz-board > .pz-sq.is-bad { color: #fff; box-shadow: inset 0 0 0 100px rgba(200, 30, 20, .75); }
+.pz-board > .pz-sq.is-done { color: #2b1a12; font-size: .7rem; box-shadow: inset 0 0 0 100px rgba(60, 120, 170, .35); }
+.pz-board > .pz-sq.is-here { font-size: clamp(1rem, 4.5vw, 1.7rem); }
+.pz-board > .pz-sq.is-next { box-shadow: inset 0 0 0 3px #3c78aa; }
+.pz-board > .pz-sq.is-hint { box-shadow: inset 0 0 0 4px #1b9e4b; }
+
+.pz-lights { max-width: min(100%, 20rem); gap: 6px; }
+.pz-lights > .pz-light { border-radius: 8px; background: #3a2a22; }
+.pz-lights > .pz-light.is-on { background: #ffcf6e; box-shadow: 0 0 14px rgba(255, 200, 90, .7); }
+.pz-lights > .pz-light.is-press { outline: 3px solid #3c9be0; outline-offset: -6px; }
+
+/* Tower of Hanoi */
+.pz-hanoi { display: grid; grid-template-columns: repeat(3, 1fr); gap: .5rem; height: 11rem; }
+.pz-peg { position: relative; border: 0; background: transparent; cursor: pointer; border-bottom: 4px solid var(--md-default-fg-color--light); }
+.pz-peg.is-held { background: var(--md-accent-fg-color--transparent); border-radius: 8px 8px 0 0; }
+.pz-rod { position: absolute; left: 50%; bottom: 0; width: 6px; height: 85%; transform: translateX(-50%); background: var(--md-default-fg-color--lighter); border-radius: 3px; }
+.pz-disc {
+  position: absolute; left: 50%; transform: translateX(-50%); height: 12%; border-radius: 6px;
+  background: hsl(var(--h) 60% 60%); border: 1px solid rgba(0, 0, 0, .25); transition: bottom .12s;
+}
+.pz-disc.is-up { bottom: 88% !important; }
+.pz-peg-name { position: absolute; bottom: -1.4rem; left: 50%; transform: translateX(-50%); font-size: .7rem; color: var(--md-default-fg-color--light); }
+.pz-hanoi + .pz-status { margin-top: 1.6rem; }
+
+/* Nim */
+.pz-nim { display: grid; gap: .5rem; }
+.pz-heap { display: flex; flex-wrap: wrap; align-items: center; gap: .3rem; }
+.pz-heap-name { width: 6.5rem; font-size: .72rem; color: var(--md-default-fg-color--light); }
+.pz-stone { width: 1.6rem; height: 1.6rem; border-radius: 50%; border: 0; cursor: pointer; background: radial-gradient(circle at 35% 30%, #f0c39a, #a9471c); }
+.pz-stone.is-marked { opacity: .35; }
+.md-typeset .pz-nimsum { white-space: pre; font-family: var(--md-code-font-family); font-size: .72rem; margin: .7rem 0 0; }
+
+/* Monty Hall */
+.pz-doors { display: grid; grid-template-columns: repeat(3, 1fr); gap: .6rem; max-width: 22rem; margin: 0 auto; }
+.pz-door {
+  aspect-ratio: 3 / 4; border-radius: 8px 8px 0 0; cursor: pointer; font: inherit; font-size: .8rem; font-weight: 600;
+  color: #2b1a12; background: #c98a5c; border: 2px solid #7a3e1b;
+}
+.pz-door.is-picked { outline: 3px solid #3c78aa; outline-offset: 2px; }
+.pz-door.is-open { background: #f3e3cf; font-size: 2rem; }
+.md-typeset .pz-tally { font-size: .72rem; margin: .4rem 0 0; }
+
+/* Sudoku */
+.pz-sudoku { display: grid; grid-template-columns: repeat(9, 1fr); max-width: min(100%, 25rem); margin: 0 auto; border: 2px solid var(--md-default-fg-color); }
+.pz-su {
+  aspect-ratio: 1; width: 100%; min-width: 0; text-align: center; font: inherit; font-size: clamp(.8rem, 3.6vw, 1.15rem);
+  border: 1px solid var(--md-default-fg-color--lighter); background: transparent; color: #3c78aa; padding: 0;
+}
+[data-md-color-scheme="slate"] .pz-su { color: #9cc9ea; }
+.pz-su.is-given { color: var(--md-default-fg-color); font-weight: 700; }
+.pz-su.is-bad { background: rgba(200, 30, 20, .35); }
+.pz-su:nth-child(9n + 3), .pz-su:nth-child(9n + 6) { border-right: 2px solid var(--md-default-fg-color); }
+.pz-su:nth-child(n + 19):nth-child(-n + 27), .pz-su:nth-child(n + 46):nth-child(-n + 54) { border-bottom: 2px solid var(--md-default-fg-color); }
+
+/* Nonograms */
+.pz-nono { display: grid; grid-template-columns: auto repeat(var(--c), minmax(1.6rem, 2.2rem)); gap: 2px; justify-content: center; align-items: end; }
+.pz-clue { font-size: .7rem; color: var(--md-default-fg-color--light); text-align: center; }
+.pz-clue--col { white-space: pre; line-height: 1.15; padding-bottom: .2rem; }
+.pz-clue--row { text-align: right; padding-right: .4rem; align-self: center; }
+.pz-nc { aspect-ratio: 1; border: 1px solid var(--md-default-fg-color--lighter); background: transparent; cursor: pointer; font-size: .8rem; color: var(--md-default-fg-color--light); padding: 0; }
+.pz-nc.is-fill { background: var(--md-default-fg-color); }
+
+/* Knights and knaves */
+.pz-kk { display: grid; gap: .5rem; }
+.pz-kk-row { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem; }
+.pz-kk-name { width: 3.5rem; font-weight: 700; }

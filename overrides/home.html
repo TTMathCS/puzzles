@@ -1,0 +1,17 @@
+{% extends "main.html" %}
+
+{% block hero %}
+<section class="mars-hero">
+  <div class="md-grid mars-hero__inner">
+    <p class="mars-hero__title">Puzzles</p>
+    <p class="mars-hero__lead">Logic puzzles, math puzzles and the ideas behind them: play each one on the page, then see why the answer works.</p>
+    <p class="mars-hero__go">
+      <a class="mars-cta" href="{{ 'start/' | url }}">Start here</a>
+      <a class="mars-pill" href="{{ 'logic/' | url }}">Logic</a>
+      <a class="mars-pill" href="{{ 'math/' | url }}">Math</a>
+      <a class="mars-pill" href="{{ 'theory/' | url }}">The ideas</a>
+    </p>
+  </div>
+  <span class="ai-created ai-created--hero">AI-created</span>
+</section>
+{% endblock %}

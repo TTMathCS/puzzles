@@ -1,0 +1,110 @@
+site_name: Puzzles
+site_url: https://puzzles.akadian.ca/
+site_description: Logic puzzles, math and recreational puzzles, and the ideas behind them (counting, invariants, game theory, complexity), with puzzles to play right on the page
+repo_url: https://github.com/TTMathCS/puzzles
+edit_uri: edit/main/docs/
+copyright: 'Part of <a href="https://www.akadian.ca/">Mars – your new home</a> · Text, puzzles and pictures on this site are AI-created'
+exclude_docs: |
+  README.md
+
+theme:
+  name: material
+  custom_dir: overrides
+  favicon: assets/akadian-icon.png   # the Akadian A, as on akadian.ca
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.highlight
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunset-up
+        name: Mars dawn
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Mars night
+  font: false
+
+extra_css:
+  - fonts/fonts.css
+  - stylesheets/mars.css
+  - stylesheets/reader.css
+  - stylesheets/puzzles.css
+  - katex/katex.min.css
+
+extra:
+  homepage: https://www.akadian.ca/
+
+extra_javascript:
+  - javascripts/mars-link.js
+  - javascripts/home-link.js
+  - katex/katex.min.js
+  - katex/auto-render.min.js
+  - javascripts/math.js
+  - javascripts/levels.js
+  - javascripts/reader.js
+  - javascripts/puzzles.js
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      title: On this page
+  - tables
+  - admonition
+  - pymdownx.details
+  - md_in_html
+  - attr_list
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+
+# With --strict, a broken link or #anchor stops the build
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
+
+nav:
+  - Home: index.md
+  - Start:
+      - start/index.md
+  - Logic puzzles:
+      - logic/index.md
+      - Knights and knaves: logic/knights-and-knaves.md
+      - River crossings: logic/river-crossings.md
+      - The zebra puzzle: logic/zebra-puzzle.md
+      - Sudoku: logic/sudoku.md
+      - Nonograms: logic/nonograms.md
+      - Hat puzzles: logic/hat-puzzles.md
+  - Math puzzles:
+      - math/index.md
+      - Tower of Hanoi: math/tower-of-hanoi.md
+      - The 15 puzzle: math/fifteen-puzzle.md
+      - Magic squares: math/magic-squares.md
+      - Eight queens: math/eight-queens.md
+      - The knight's tour: math/knights-tour.md
+      - Lights Out: math/lights-out.md
+      - The Monty Hall problem: math/monty-hall.md
+      - The bridges of Königsberg: math/konigsberg.md
+  - The ideas behind:
+      - theory/index.md
+      - Counting: theory/counting.md
+      - Invariants and parity: theory/invariants.md
+      - Game theory and Nim: theory/game-theory.md
+      - Search and backtracking: theory/search.md
+      - How hard is a puzzle?: theory/complexity.md
+  - About: about.md
