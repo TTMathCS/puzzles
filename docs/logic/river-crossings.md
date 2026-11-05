@@ -72,6 +72,8 @@ four cross in 17 minutes?
     Total 2 + 1 + 10 + 2 + 2 = 17. The trick is to send the two slowest **together**, so the 10-minute walk also
     carries the 5-minute walker for free.
 
+<figure class="play" data-play="torch"><span class="ai-tag">AI-created</span><figcaption><b>Try it.</b> Tap one or two people on the torch’s side, then Cross; the torch must come back each time. A pair walks at the slower one’s pace. Can you get all four over in 17 minutes?</figcaption></figure>
+
 The obvious plan, where the fastest person escorts everyone, takes 10 + 1 + 5 + 1 + 2 = 19 minutes. For any
 number of people, the best schedule is known: at each stage choose the cheaper of "the fastest escorts the two
 slowest" and "the two slowest cross together". Rote (2002) proved this rule always gives the minimum.

@@ -59,6 +59,8 @@ the third colour (a red and a green both become blue, and so on). Can all the ch
     Now: red 13, green 15, blue 17. The differences are 2, 2 and 4, leaving remainders 2, 2 and 1. If all chameleons
     were one colour, two counts would be 0, and their difference 0, remainder 0. Impossible.
 
+<figure class="play" data-play="chameleons"><span class="ai-tag">AI-created</span><figcaption><b>Watch it.</b> Press Play to let the chameleons meet at random. The three counts wander up and down, but the remainder of green minus red, divided by 3, never changes.</figcaption></figure>
+
 ## Why it works: monovariants too
 
 Sometimes the useful quantity doesn't stay fixed but always moves **one way**. Such a **monovariant** proves that a
