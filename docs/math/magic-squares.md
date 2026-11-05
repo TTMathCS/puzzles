@@ -64,6 +64,8 @@ For any odd $n$ there is a simple recipe, described by Simon de la Loubère afte
 For $n = 3$ this gives 8 1 6 / 3 5 7 / 4 9 2, the Lo Shu flipped upside down. Try it for $n = 5$ on paper; the
 constant should be 65.
 
+<figure class="play" data-play="siamese"><span class="ai-tag">AI-created</span><figcaption><b>Watch it.</b> De la Loubère’s recipe: start in the middle of the top row, step up and to the right, wrap round the edges, and drop down one square when the next is taken.</figcaption></figure>
+
 ## Dürer's square
 
 In 1514 the artist Albrecht Dürer put a 4 × 4 magic square in his engraving *Melencolia I*:

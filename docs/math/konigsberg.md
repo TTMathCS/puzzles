@@ -25,6 +25,8 @@ Try to trace a route that uses each of the seven bridges once. You may start and
     3, the east 3. All four are **odd**. As the next section shows, a walk using every bridge once is possible only
     when at most two areas have an odd number of bridges.
 
+<figure class="play" data-play="bridges"><span class="ai-tag">AI-created</span><figcaption><b>Walk it.</b> Tap a land to start, then tap a bridge next to you to cross it. Each bridge can be used once. The number on each land is how many bridges touch it: all four are odd, which is why every walk gets stuck.</figcaption></figure>
+
 ## How to think about it: only the connections matter
 
 Euler's key step was to throw away almost everything: the shapes of the land, the lengths of the bridges, the street
