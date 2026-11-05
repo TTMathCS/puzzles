@@ -41,6 +41,7 @@ extra_css:
   - fonts/fonts.css
   - stylesheets/mars.css
   - stylesheets/reader.css
+  - stylesheets/sketch.css
   - stylesheets/puzzles.css
   - katex/katex.min.css
 
