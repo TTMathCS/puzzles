@@ -53,6 +53,8 @@ move and after its last, the other $n - 1$ discs must be moved as a whole tower,
 one move per second, without a mistake or a rest, the monks would need about 585 billion years, roughly forty times
 the age of the universe. The legend is safe.
 
+<figure class="play" data-play="hanoimap"><span class="ai-tag">AI-created</span><figcaption><b>The map of every position.</b> Each dot is one way the discs can sit (3<sup><i>n</i></sup> of them) and each line one legal move; together they make a Sierpiński triangle. Press Play to watch the fastest solution run down one side in 2<sup><i>n</i></sup> − 1 moves. Each move is counted in binary: the zeros at the end say which disc moves, and each disc plays its own note. Sound starts only after you press Play.</figcaption></figure>
+
 ## Going deeper
 
 ??? info "Binary numbers in disguise"

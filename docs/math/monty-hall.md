@@ -54,6 +54,8 @@ $$
 because if the car is behind door 2 the host *must* open door 3, while overall (by symmetry) he opens door 3 half the
 time. The host's choice carries information, and Bayes' rule measures exactly how much.
 
+<figure class="play" data-play="montysim"><span class="ai-tag">AI-created</span><figcaption><b>Play it a thousand times.</b> Press Play: two players face the same 1,000 games, one always staying with the first pick, one always switching. The lines show the share each has won so far; they settle near 1/3 and 2/3, as the table says. With 10 doors, where the host opens all but one, switching wins about 9 times in 10. Each run deals new games.</figcaption></figure>
+
 ## When the answer changes
 
 The answer depends on the rules the host follows, which is part of why people argued so fiercely.
