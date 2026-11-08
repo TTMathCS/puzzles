@@ -85,32 +85,37 @@ validation:
   anchors: warn
 
 nav:
-  - Home: index.md
+  # Five tabs at most, the same on every course site (cntourit, 8 Nov 2026: "same format and similar categories"):
+  # Home, Start, Topics, Books, Labs, shown where a site has them. No page moved; every address is unchanged.
+  - Home:
+      - index.md
+      - About this site: about.md
   - Start:
       - start/index.md
-  - Logic puzzles:
-      - logic/index.md
-      - Knights and knaves: logic/knights-and-knaves.md
-      - River crossings: logic/river-crossings.md
-      - The zebra puzzle: logic/zebra-puzzle.md
-      - Sudoku: logic/sudoku.md
-      - Nonograms: logic/nonograms.md
-      - Hat puzzles: logic/hat-puzzles.md
-  - Math puzzles:
-      - math/index.md
-      - Tower of Hanoi: math/tower-of-hanoi.md
-      - The 15 puzzle: math/fifteen-puzzle.md
-      - Magic squares: math/magic-squares.md
-      - Eight queens: math/eight-queens.md
-      - The knight's tour: math/knights-tour.md
-      - Lights Out: math/lights-out.md
-      - The Monty Hall problem: math/monty-hall.md
-      - The bridges of Königsberg: math/konigsberg.md
-  - The ideas behind:
-      - theory/index.md
-      - Counting: theory/counting.md
-      - Invariants and parity: theory/invariants.md
-      - Game theory and Nim: theory/game-theory.md
-      - Search and backtracking: theory/search.md
-      - How hard is a puzzle?: theory/complexity.md
-  - About: about.md
+  - Topics:
+      - topics/index.md
+      - Logic puzzles:
+          - logic/index.md
+          - Knights and knaves: logic/knights-and-knaves.md
+          - River crossings: logic/river-crossings.md
+          - The zebra puzzle: logic/zebra-puzzle.md
+          - Sudoku: logic/sudoku.md
+          - Nonograms: logic/nonograms.md
+          - Hat puzzles: logic/hat-puzzles.md
+      - Math puzzles:
+          - math/index.md
+          - Tower of Hanoi: math/tower-of-hanoi.md
+          - The 15 puzzle: math/fifteen-puzzle.md
+          - Magic squares: math/magic-squares.md
+          - Eight queens: math/eight-queens.md
+          - The knight's tour: math/knights-tour.md
+          - Lights Out: math/lights-out.md
+          - The Monty Hall problem: math/monty-hall.md
+          - The bridges of Königsberg: math/konigsberg.md
+      - The ideas behind:
+          - theory/index.md
+          - Counting: theory/counting.md
+          - Invariants and parity: theory/invariants.md
+          - Game theory and Nim: theory/game-theory.md
+          - Search and backtracking: theory/search.md
+          - How hard is a puzzle?: theory/complexity.md
