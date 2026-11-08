@@ -25,12 +25,14 @@
 
 /* lists of puzzles on the section pages */
 .md-typeset .pz-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); gap: .7rem; margin: 1rem 0; }
-.md-typeset .pz-cards > a {
+/* Markdown wraps the links in one <p>: let them sit in the grid as if it were not there */
+.md-typeset .pz-cards > p { display: contents; }
+.md-typeset .pz-cards > a, .md-typeset .pz-cards > p > a {
   display: block; padding: .7rem .8rem; border-radius: 10px;
   border: 1px solid var(--md-default-fg-color--lightest); background: var(--mars-bg-soft);
   color: var(--md-default-fg-color);
 }
-.md-typeset .pz-cards > a:hover { border-color: var(--mars-rust); }
+.md-typeset .pz-cards > a:hover, .md-typeset .pz-cards > p > a:hover { border-color: var(--mars-rust); }
 .md-typeset .pz-cards strong { display: block; color: var(--mars-rust); }
 .md-typeset .pz-cards span { font-size: .7rem; color: var(--md-default-fg-color--light); }
 
